@@ -1,0 +1,210 @@
+# =========================
+# System files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Editor / IDE
+# =========================
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Environment files
+# =========================
+.env
+.env.*
+!.env.example
+!.env.template
+
+# =========================
+# Temporary files
+# =========================
+tmp/
+temp/
+.cache/
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# =========================
+# Java
+# =========================
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+target/
+out/
+build/
+bin/
+
+.gradle/
+.mvn/wrapper/maven-wrapper.jar
+
+# Maven
+dependency-reduced-pom.xml
+
+# Gradle
+.gradle
+gradle-app.setting
+!gradle-wrapper.jar
+
+# Spring Boot
+HELP.md
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+.Python
+venv/
+.venv/
+env/
+ENV/
+
+pip-log.txt
+pip-delete-this-directory.txt
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+dist/
+build/
+*.egg-info/
+.eggs/
+
+.ipynb_checkpoints/
+
+# =========================
+# Go
+# =========================
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+*.test
+*.out
+
+go.work.sum
+
+# Go build output
+/bin/
+/pkg/
+
+# =========================
+# Node / Frontend / Vue
+# =========================
+node_modules/
+
+dist/
+dist-ssr/
+coverage/
+
+.npm/
+.yarn/
+.pnpm-store/
+
+# Vite / Vue
+.vite/
+*.local
+
+# VuePress / VitePress
+.vuepress/dist/
+.vitepress/dist/
+
+# Nuxt
+.nuxt/
+.output/
+
+# Next.js
+.next/
+
+# React / CRA
+build/
+
+# SvelteKit
+.svelte-kit/
+
+# =========================
+# Package managers
+# =========================
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# 如果你希望锁定依赖版本，建议不要忽略上面三个 lock 文件。
+# 多人协作或正式项目中，通常应提交 package-lock.json / yarn.lock / pnpm-lock.yaml。
+
+# =========================
+# TypeScript
+# =========================
+*.tsbuildinfo
+
+# =========================
+# CSS / frontend tools
+# =========================
+.sass-cache/
+
+# =========================
+# Database / local data
+# =========================
+*.sqlite
+*.sqlite3
+*.db
+
+# =========================
+# Uploads / local files
+# =========================
+uploads/
+files/
+storage/
+
+# =========================
+# Docker
+# =========================
+.docker/
+docker-compose.override.yml
+
+# =========================
+# Test / reports
+# =========================
+reports/
+test-results/
+playwright-report/
+
+# =========================
+# Misc
+# =========================
+*.pid
+*.seed
+*.pid.lock
