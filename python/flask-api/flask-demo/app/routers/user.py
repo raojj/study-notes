@@ -6,7 +6,6 @@
     @File    : user.py
     @Purpose : 
 """
-from datetime import datetime, UTC
 from flask import Blueprint, request
 from app.models import User
 from app.extension import db
@@ -23,7 +22,6 @@ def register():
         username=data['username'],
         email=data['email'],
         password=encrypt_password(data['password']),
-        create_time=datetime.now(UTC),
     )
     user_verify_username = User.query.filter_by(username=user.username).first()
     if user_verify_username:

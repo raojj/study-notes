@@ -8,7 +8,7 @@
 """
 import hashlib
 from datetime import date
-
+from typing import Any
 PASSWORD_SALT = "joe"
 
 
@@ -32,10 +32,10 @@ def verify_password(password: str, encrypted_password: str) -> bool:
     return encrypt_password(password) == encrypted_password
 
 
-def success(data: dict) -> dict:
+def success(data: Any) -> dict:
     return {
         "code": 0,
-        "message": "success",
+        "status": "success",
         "data": data
     }
 
@@ -43,7 +43,7 @@ def success(data: dict) -> dict:
 def fail(message: str) -> dict:
     return {
         "code": 404,
-        "message": "fail",
+        "status": "fail",
         "data": {
             "message": message
         }

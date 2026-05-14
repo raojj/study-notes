@@ -25,3 +25,16 @@ class Tasks(db.Model):
     updated_at = db.Column(db.DateTime, default=datetime.now(UTC))
 
     users = db.relationship('User', backref='tasks')
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'title': self.title,
+            'description': self.description,
+            'priority': self.priority,
+            'status': self.status,
+            'due_date': self.due_date,
+            'is_deleted': "已删除" if self.is_deleted == 1 else "未删除",
+            'created_at': self.created_at,
+            'updated_at': self.updated_at,
+        }

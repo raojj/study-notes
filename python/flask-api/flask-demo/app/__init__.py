@@ -18,7 +18,7 @@ def create_app():
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(app)
     jwt.init_app(app)
-    app.config['JWT_SECRET_KEY'] = 'joe'
+    app.config['JWT_SECRET_KEY'] = 'joe-task-manage-system-test'
     app.register_blueprint(user_bp, url_prefix='/api/auth')
     app.register_blueprint(task_bp, url_prefix='/api')
     from app import models
