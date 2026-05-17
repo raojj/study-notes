@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">BasicGrammar</string>
+
+    <!-- Login -->
+    <string name="login_title">欢迎回来</string>
+    <string name="login_subtitle">登录以继续使用</string>
+    <string name="login_username_label">用户名 / 手机号</string>
+    <string name="login_password_label">密码</string>
+    <string name="login_remember_me">记住我</string>
+    <string name="login_forgot_password">忘记密码？</string>
+    <string name="login_button">登录</string>
+    <string name="login_no_account">还没有账号？</string>
+    <string name="login_register">立即注册</string>
+    <string name="login_toggle_password_show">显示密码</string>
+    <string name="login_toggle_password_hide">隐藏密码</string>
+
+    <!-- Validation -->
+    <string name="login_error_username_empty">请输入用户名或手机号</string>
+    <string name="login_error_password_empty">请输入密码</string>
+    <string name="login_error_password_short">密码至少 6 位</string>
+    <string name="login_error_invalid_credentials">用户名或密码错误</string>
+    <string name="login_success">登录成功</string>
+</resources>

@@ -10,13 +10,14 @@ from flask import Blueprint, request
 from app.models import User
 from app.extension import db
 from app.tools.tools import encrypt_password, verify_password, success, fail
-from flask_jwt_extended import create_access_token
+from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required
 
 user_bp = Blueprint('user_bp', __name__)
 
 
 @user_bp.post('/register')
 def register():
+    """用户注册"""
     data = request.get_json()
     user = User(
         username=data['username'],
@@ -41,6 +42,7 @@ def register():
 
 @user_bp.post('/login')
 def login():
+    """用户登录"""
     email = request.form.get('email')
     password = request.form.get('password')
     user = User(
@@ -59,3 +61,15 @@ def login():
             return fail("用户密码错误！")
     else:
         return fail("用户不存在！")
+
+
+@user_bp.get('/user')
+@jwt_required()
+def get_user():
+    """获取当前用户"""
+    username = get_jwt_identity()
+    user = User.query.filter_by(username=username).first()
+    if not user:
+        return fail("未查到相关用户")
+    else:
+        return success(user.to_dict())
